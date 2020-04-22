@@ -1,4 +1,5 @@
-# Merit Coin: Projetos Integrados de Aplicações (PIA) Pós-Graduação Desenvolvimento Web Full Stack
+# Merit Coin: Projetos Integrados de Aplicações (PIA) 
+# Pós-Graduação Desenvolvimento Web Full Stack - Puc Minas
 # FrontEnd
 ![enter image description here](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png)
 - Desenvolvido com Framework ReactJS
