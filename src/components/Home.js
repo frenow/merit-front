@@ -1,17 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { connect } from 'react-redux';
-import { addUser } from '../actions';
-import Label_balance from './Label_balance';
 import api from '../api/api';
 import { Table } from 'react-bootstrap';
 
-const Saldo = (props) => {
+const Home = (props) => {
 
   const {
     user
   } = props;
 
-  const [users, setUsers] = useState([]);
   const [state, setState] = useState({
     error: null,
     isLoaded: false,
@@ -24,21 +20,14 @@ const Saldo = (props) => {
   }, [state.isLoaded]); 
 
   async function find_history() {    
-    const response = await api.get('/history/'+user[0].uid);
+    const response = await api.get('/history');
     setState({isLoaded: true, items: response.data.history});
-  } 
-
-  useEffect(() => {
-    setUsers(user); 
-  }, [user]); 
+  }
 
   return (
-    <div className="App">
-          {
-            user[0]
-              ? <Label_balance />
-              : <div></div>
-          }   
+    <div>
+    <h1>Como podemos usar estruturas de bônus que podem realmente incentivar a motivação intrínseca?</h1>
+    <p>Normalmente, os bônus são alocados por classificações de desempenho, cargo ou função, salário, horas extras ou outra variável, cada uma pior que a anterior. Décadas de pesquisa confirmaram repetidas vezes que os sistemas de bônus tradicionais raramente têm um efeito positivo no desempenho das pessoas quando estão envolvidas no trabalho criativo do conhecimento. No que diz respeito a um sistema de remuneração fixa, ele não enfrenta o desafio de pagar aos funcionários o que eles realmente ganham.</p>
     <h2>Historico de Movimentacoes</h2>
     <Table striped bordered hover variant="dark">
     <thead>
@@ -65,19 +54,10 @@ const Saldo = (props) => {
           })
         }
     </tbody>
-    </Table> 
-  
+    </Table>
+
     </div>
   );
 };
 
-const mapStateToProps = store => ({
-  user: store.user
-});
- 
-const mapDispatchToProps= (dispatch)=>{    
-  return{
-    addUser: (user)=>{dispatch(addUser(user))},
-  }
-}
-export default connect(mapStateToProps, mapDispatchToProps)(Saldo);
+export default (Home);

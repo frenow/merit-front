@@ -13,6 +13,7 @@ import Sobre from "./components/Sobre";
 import Menu from "./components/Menu";
 import Saldo from "./components/Saldo";
 import Profile from "./components/Profile";
+import Home from "./components/Home";
 import './App.css';
 import { ADD_USER } from './actions/actionTypes';
 import { addUser } from './actions';
@@ -45,6 +46,7 @@ const App = (props) => {
         <header className="App-header">
         <Switch>
             <Route exact path="/" component={Profile} />
+            <Route exact path="/Profile" component={Profile} />
             <Route exact path="/Saldo" component={Saldo} />
             <Route exact path="/Sobre" component={Sobre} />
           </Switch>
@@ -63,7 +65,11 @@ const App = (props) => {
               ? <div></div>            
               : <Button bsStyle="primary" onClick={signInWithGoogle}>Sign in with Google</Button>
           }
-      
+          {
+            user
+              ? <div></div>            
+              : <Home />
+          }
         </header>
       </div>
       </BrowserRouter>

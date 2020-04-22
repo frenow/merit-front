@@ -31,7 +31,7 @@ const Profile = (props) => {
     console.log('balance alterado');
   }, [balance]); 
 
-  async function handleRecompensa(){
+  async function handleReward(){
     //e.preventDefault();
 
     const reward = 50;
@@ -71,7 +71,7 @@ const Profile = (props) => {
           }     
           {
             user[0]
-              ? <Button variant="outline-light" onClick={handleRecompensa}>Solicitar Reconpensa</Button>
+              ? <Button variant="outline-light" onClick={handleReward}>Solicitar Reconpensa</Button>
               : <div></div>
           }     
   

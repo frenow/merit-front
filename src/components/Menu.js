@@ -1,11 +1,18 @@
 import React from "react";
-import { NavLink } from 'react-router-dom';
+import { NavLink, useHistory } from 'react-router-dom';
 import { Button, Nav, Navbar, Form } from 'react-bootstrap';
 
 const Menu = (props) => {
   const {
     signOut,
   } = props;
+  const history = useHistory();
+
+const redirect = () => {
+  signOut();
+  history.push("/");
+}
+
   return (
     <div>
         <Navbar bg="primary" variant="dark" fixed="top">
@@ -16,7 +23,7 @@ const Menu = (props) => {
             <Nav.Link as={NavLink} to="/Sobre">Sobre</Nav.Link>
         </Nav>
         <Form inline>
-            <Button variant="outline-light" onClick={signOut}>Sign Out</Button>
+            <Button variant="outline-light" onClick={redirect}>Sign Out</Button>
         </Form>
         </Navbar>
     </div>
