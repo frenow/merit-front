@@ -1,5 +1,5 @@
 # Merit Coin: Projetos Integrados de Aplicações (PIA) Pós-Graduação Desenvolvimento Web Full Stack
-# API FrontEnd
+# FrontEnd
 ![enter image description here](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1200px-React-icon.svg.png)
 - Desenvolvido com Framework ReactJS
 ![enter image description here](https://getbootstrap.com.br/docs/4.1/assets/brand/bootstrap-social.png)
