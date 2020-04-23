@@ -9,14 +9,18 @@ import firebaseConfig from './config/firebaseConfig';
 import { BrowserRouter, Route, Switch, withRouter } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import { Store } from './store';
-import Sobre from "./components/Sobre";
+import About from "./components/About";
 import Menu from "./components/Menu";
-import Saldo from "./components/Saldo";
+import Balance from "./components/Balance";
+import Deposit from "./components/Deposit";
+import Withdrawal from "./components/Withdrawal";
+import Reward from "./components/Reward";
 import Profile from "./components/Profile";
 import Home from "./components/Home";
 import './App.css';
 import { ADD_USER } from './actions/actionTypes';
 import { addUser } from './actions';
+import { FcGoogle } from "react-icons/fc";
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
@@ -47,8 +51,11 @@ const App = (props) => {
         <Switch>
             <Route exact path="/" component={Profile} />
             <Route exact path="/Profile" component={Profile} />
-            <Route exact path="/Saldo" component={Saldo} />
-            <Route exact path="/Sobre" component={Sobre} />
+            <Route exact path="/Balance" component={Balance} />
+            <Route exact path="/Deposit" component={Deposit} />
+            <Route exact path="/Withdrawal" component={Withdrawal} />
+            <Route exact path="/Reward" component={Reward} />
+            <Route exact path="/About" component={About} />
           </Switch>
           {
             user
@@ -57,13 +64,8 @@ const App = (props) => {
           }
           {
             user
-              ? <div></div>
-              : <p>Please sign in.</p>
-          }
-          {
-            user
               ? <div></div>            
-              : <Button bsStyle="primary" onClick={signInWithGoogle}>Sign in with Google</Button>
+              : <Button bsStyle="primary" variant="outline-light" onClick={signInWithGoogle}><FcGoogle />Sign in with Google</Button>
           }
           {
             user

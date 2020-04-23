@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import api from '../api/api';
 import { Table } from 'react-bootstrap';
+import { BsGraphUp } from "react-icons/bs";
+import { IoLogoBitcoin } from "react-icons/io";
 
 const Home = (props) => {
 
@@ -25,10 +27,16 @@ const Home = (props) => {
   }
 
   return (
+    <>
     <div>
-    <h1>Como podemos usar estruturas de bônus que podem realmente incentivar a motivação intrínseca?</h1>
-    <p>Normalmente, os bônus são alocados por classificações de desempenho, cargo ou função, salário, horas extras ou outra variável, cada uma pior que a anterior. Décadas de pesquisa confirmaram repetidas vezes que os sistemas de bônus tradicionais raramente têm um efeito positivo no desempenho das pessoas quando estão envolvidas no trabalho criativo do conhecimento. No que diz respeito a um sistema de remuneração fixa, ele não enfrenta o desafio de pagar aos funcionários o que eles realmente ganham.</p>
-    <h2>Historico de Movimentacoes</h2>
+    <div className="container">
+    <h1>Sistema de Recompensa <IoLogoBitcoin />Merit</h1>
+    <h3>Como podemos usar estruturas de bônus que podem realmente incentivar a motivação intrínseca?</h3>
+    <p>Como podemos incentivar o desempenho? Como podemos recompensar as pessoas pelo trabalho que fizeram? Mais importante, como aumentamos a motivação intrínseca, em vez da motivação extrínseca mais confiável que desaparece rapidamente.</p>
+    <img src="https://1qjpt15fhlq3xjfpm2utibj1-wpengine.netdna-ssl.com/wp-content/themes/m30/images/m30-logo.png" alt="Merit" height="90" width="90"></img>
+    <h3>Metodologia <a href="https://management30.com/practice/merit-money/">Merit Money</a></h3>
+    </div>
+    <h2><BsGraphUp />Histórico de Movimentações</h2>
     <Table striped bordered hover variant="dark">
     <thead>
         <tr>
@@ -55,8 +63,15 @@ const Home = (props) => {
         }
     </tbody>
     </Table>
-
+    <style jsx>{`
+      p {
+        text-align: justify;
+        text-justify: inter-word;
+        font-size:18px; 
+      }
+      `}</style>    
     </div>
+    </>
   );
 };
 

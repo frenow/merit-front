@@ -4,8 +4,9 @@ import { addUser } from '../actions';
 import Label_balance from './Label_balance';
 import api from '../api/api';
 import { Table } from 'react-bootstrap';
+import { BsGraphUp } from "react-icons/bs";
 
-const Saldo = (props) => {
+const Balance = (props) => {
 
   const {
     user
@@ -33,13 +34,14 @@ const Saldo = (props) => {
   }, [user]); 
 
   return (
-    <div className="App">
+    <div className="container">
           {
             user[0]
               ? <Label_balance />
               : <div></div>
           }   
-    <h2>Historico de Movimentacoes</h2>
+    
+    <h2><BsGraphUp />Histórico de Movimentações</h2>
     <Table striped bordered hover variant="dark">
     <thead>
         <tr>
@@ -66,8 +68,12 @@ const Saldo = (props) => {
         }
     </tbody>
     </Table> 
-  
-    </div>
+    <style jsx>{`
+      .container {
+        margin-top: 65px;
+      }  
+      `}</style>    
+      </div>
   );
 };
 
@@ -80,4 +86,4 @@ const mapDispatchToProps= (dispatch)=>{
     addUser: (user)=>{dispatch(addUser(user))},
   }
 }
-export default connect(mapStateToProps, mapDispatchToProps)(Saldo);
+export default connect(mapStateToProps, mapDispatchToProps)(Balance);

@@ -4,7 +4,7 @@ import { ADD_BALANCE } from '../actions/actionTypes';
 import { addUser, addBalance } from '../actions';
 import api from '../api/api';
 import * as firebase from 'firebase';
-
+import { IoLogoBitcoin } from "react-icons/io";
 
 const Label_balance = (props) => {
     const {
@@ -40,7 +40,7 @@ const Label_balance = (props) => {
   return (
     <div className="App">
 
-    <p>SALDO ${props.balance}</p>
+    <p>Saldo <IoLogoBitcoin />{props.balance}</p>
 
     </div>
   );

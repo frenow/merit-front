@@ -6,6 +6,8 @@ import { Button } from 'react-bootstrap';
 import * as firebase from 'firebase';
 import Label_balance from './Label_balance';
 import { ADD_BALANCE } from '../actions/actionTypes';
+import { IoLogoBitcoin } from "react-icons/io";
+import { GiWallet } from "react-icons/gi";
 
 const Profile = (props) => {
 
@@ -56,7 +58,7 @@ const Profile = (props) => {
           }
           {
             user[0]
-              ? <p>Hello, {user[0].displayName}</p>
+              ? <p>Ola, {user[0].displayName}</p>
               : <div></div>
           }
           {
@@ -66,12 +68,17 @@ const Profile = (props) => {
           } 
           {
             user[0]
+              ? <p><GiWallet />{user[0].uid}</p>
+              : <div></div>
+          } 
+          {
+            user[0]
               ? <img src={user[0].photoURL} alt = "avatar" height="82" width="82"></img>
               : <div></div>
           }     
           {
             user[0]
-              ? <Button variant="outline-light" onClick={handleReward}>Solicitar Reconpensa</Button>
+              ? <Button variant="outline-light" onClick={handleReward}><IoLogoBitcoin />Solicitar Reconpensa</Button>
               : <div></div>
           }     
   
