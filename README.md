@@ -7,3 +7,5 @@
 - Uso do bootstrap para estilos
 ![enter image description here](https://miro.medium.com/max/3840/1*Y4XYHylpigYOvfeqGWQmiQ.png)
 - Uso da biblioteca axios para consumo da API
+![enter image description here](https://www.netlify.com/img/global/meta-image.jpg)
+- Deploy e publicacao NETLIFY https://silly-franklin-3c937d.netlify.app/
