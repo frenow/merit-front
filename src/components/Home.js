@@ -18,7 +18,6 @@ const Home = (props) => {
 
   useEffect(() => {
     find_history();
-    console.log(state.items);
   }, [state.isLoaded]); 
 
   async function find_history() {    

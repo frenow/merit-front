@@ -71,6 +71,7 @@ const Balance = (props) => {
     <style jsx>{`
       .container {
         margin-top: 65px;
+        font-size:18px; 
       }  
       `}</style>    
       </div>

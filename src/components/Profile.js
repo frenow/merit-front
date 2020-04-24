@@ -27,14 +27,26 @@ const Profile = (props) => {
     props.addBalance(balance);
     return { type: ADD_BALANCE, balance }
   }  
-  
+
+
+  async function signin() {
+    const messaging = firebase.messaging();
+    const token = await messaging.getToken();
+    console.log(token);
+    
+    const body = JSON.stringify({id: user[0].uid, email: user[0].email, token: token});
+    const response = await api.post('/signin',body);
+
+    console.log(response.data);    
+  }
+
   useEffect(() => {
     addBalance(balance);
     console.log('balance alterado');
+    if (user[0]) signin();
   }, [balance]); 
 
   async function handleReward(){
-    //e.preventDefault();
 
     const reward = 50;
 

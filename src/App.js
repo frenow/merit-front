@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import withFirebaseAuth from 'react-with-firebase-auth';
 import { connect } from 'react-redux';
 import { Provider } from 'react-redux';
-import { bindActionCreators, compose } from 'redux'
+import { compose } from 'redux'
 import * as firebase from 'firebase/app';
 import 'firebase/auth';
 import firebaseConfig from './config/firebaseConfig';
@@ -31,10 +31,7 @@ const App = (props) => {
     signInWithGoogle,
   } = props;
 
-  const [users, setUsers] = useState([]);
-
   useEffect(() => {
-    setUsers(user); 
     addUser(user);
   }, [user]); 
 

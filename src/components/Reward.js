@@ -2,6 +2,10 @@ import React, { useState, useEffect } from "react";
 import { Button } from "react-bootstrap";
 import { GiWantedReward } from "react-icons/gi";
 import { IoLogoBitcoin } from "react-icons/io";
+import api from '../api/api';
+import { connect } from 'react-redux';
+import { addUser } from '../actions';
+import * as firebase from 'firebase';
 
 const products = {
     "items": [
@@ -50,9 +54,42 @@ const products = {
     ]
   }
 
-const Reward = () => {
+const Reward = (props) => {
+
+  const {
+    user
+  } = props;
+
     const [product, setProduct] = useState([]);
 
+    const [state, setState] = useState({
+      error: null,
+      isLoaded: false,
+      items: []
+    });
+
+    async function rewarded(idprod, price) {
+
+      const messaging = firebase.messaging();
+      const token = await messaging.getToken();
+      console.log(token);
+      
+      const body = JSON.stringify({id: user[0].uid, email: user[0].email, token: token, value: price});
+      const response = await api.post('/product_reward',body);
+    
+      console.log(response.data);
+      if (response.data.message == 'Success') {
+        alert('Resgate efetuado com sucesso. Voucher code: 25a8ce08b56217eff55cc0cca382613d');
+      }
+      if (response.data.message == 'Failure') {
+        alert('Saldo insuficiente para resgate.');
+      }
+    }
+
+    const handleClick = (idprod, price) => {
+      rewarded(idprod, price);
+    }
+  
     useEffect(() => {
       getProducts().then( (prod) => setProduct(prod.items));    
     }, []);  
@@ -79,7 +116,7 @@ const Reward = () => {
             />
             )}
             <li key={prod.id}>{prod.name} - {prod.description} <p><IoLogoBitcoin />{prod.price}</p></li>
-            <Button><GiWantedReward />Solicitar Resgate</Button>
+            <Button onClick={()=>handleClick(prod.id, prod.price)}><GiWantedReward />Solicitar Resgate</Button>
         </a>
         )}
         )}
@@ -117,6 +154,7 @@ const Reward = () => {
        }
        p {
         font-size:28px; 
+        color: #000000;
        }
        img {
         height:170px;
@@ -127,4 +165,13 @@ const Reward = () => {
   );
 };
 
-export default Reward;
+const mapStateToProps = store => ({
+  user: store.user
+});
+ 
+const mapDispatchToProps= (dispatch)=>{    
+  return{
+    addUser: (user)=>{dispatch(addUser(user))},
+  }
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Reward);
