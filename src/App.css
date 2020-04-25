@@ -3,11 +3,8 @@
 }
 
 .App-header {
-
-    background-image: url(./dti.png);
-
-    background-repeat: no-repeat;
- 
+  background-image: url(./dti.png);
+  background-repeat: no-repeat; 
   /* Full height */
   height: 100%;
 

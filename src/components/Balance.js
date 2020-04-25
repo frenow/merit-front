@@ -34,13 +34,15 @@ const Balance = (props) => {
   }, [user]); 
 
   return (
+    <>
     <div className="container">
           {
             user[0]
               ? <Label_balance />
               : <></>
           }   
-    
+    </div>
+    <div className="tabela">
     <h2><BsGraphUp />Histórico de Movimentações</h2>
     <Table striped bordered hover variant="dark">
     <thead>
@@ -68,13 +70,21 @@ const Balance = (props) => {
         }
     </tbody>
     </Table> 
+    </div>
     <style jsx>{`
       .container {
-        margin-top: 65px;
+        margin-top: 85px;
+        padding: 18px 18px 8px;
+        width: 800px;
+        text-align: left;
+        text-decoration: none;
+        background-color: #0275d8
+      }
+      .tabela {
         font-size:18px; 
       }  
       `}</style>    
-      </div>
+      </>
   );
 };
 
