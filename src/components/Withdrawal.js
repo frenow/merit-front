@@ -14,11 +14,20 @@ const {
   const link = window.location.protocol + '//' + window.location.hostname + ':' + window.location.port+"/qrcode?value="+user[0].uid;
   
   return (
-    <div className="App">
+    <div className="container">
     <p><GiWallet />{user[0].uid}</p>
     <p>{link}</p>
     <QRCode value={link} />
-
+    <style jsx>{`
+      .container {
+        margin-top: 65px;
+        padding: 18px 18px 24px;
+        width: 640px;
+        text-align: left;
+        text-decoration: none;
+        background-color: #0275d8
+      }
+      `}</style> 
     </div>
   );
 };

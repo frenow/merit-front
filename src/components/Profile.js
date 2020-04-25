@@ -62,38 +62,48 @@ const Profile = (props) => {
   }
   
   return (
-    <div className="App">
+    <div className='container'>
           {
             user[0]
               ? <Label_balance />
-              : <div></div>
+              : <></>
           }
           {
             user[0]
               ? <p>Ola, {user[0].displayName}</p>
-              : <div></div>
+              : <></>
           }
           {
             user[0]
               ? <p>{user[0].email}</p>
-              : <div></div>
+              : <></>
           } 
           {
             user[0]
               ? <p><GiWallet />{user[0].uid}</p>
-              : <div></div>
+              : <></>
           } 
           {
             user[0]
               ? <img src={user[0].photoURL} alt = "avatar" height="82" width="82"></img>
-              : <div></div>
+              : <></>
           }     
           {
             user[0]
               ? <Button variant="outline-light" onClick={handleReward}><IoLogoBitcoin />Solicitar Reconpensa</Button>
-              : <div></div>
+              : <></>
           }     
-  
+    <style jsx>{`
+      .container {
+        margin-top: 65px;
+        padding: 18px 18px 24px;
+        width: 640px;
+        text-align: left;
+        text-decoration: none;
+        background-color: #0275d8;
+      }
+      `}</style>   
+
     </div>
   );
 };

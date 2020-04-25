@@ -139,8 +139,7 @@ const Reward = (props) => {
         text-align: left;
         text-decoration: none;
         color: #434343;
-        border: 1px solid #9b9b9b;
-
+        background-color: #0275d8
       }
       .card:hover {
         border-color: #067df7;
@@ -150,11 +149,9 @@ const Reward = (props) => {
       }
       ul li{
         font-size:18px;
-        color: #000000;
        }
        p {
         font-size:28px; 
-        color: #000000;
        }
        img {
         height:170px;

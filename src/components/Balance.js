@@ -38,7 +38,7 @@ const Balance = (props) => {
           {
             user[0]
               ? <Label_balance />
-              : <div></div>
+              : <></>
           }   
     
     <h2><BsGraphUp />Histórico de Movimentações</h2>

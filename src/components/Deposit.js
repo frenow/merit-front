@@ -64,6 +64,7 @@ async function find_history() {
 } 
 
   return (
+    <>
     <div className="container">
     <div className="form-group">
     <Form onSubmit={handleSubmit}>
@@ -98,6 +99,8 @@ async function find_history() {
     </Form>
       {deposited && (<p>{deposited}</p>)}
     </div>
+    </div>
+    <div className="tabela">
     <h2><BsGraphUp />Histórico de Depósitos</h2>
     <Table striped bordered hover variant="dark">
     <thead>
@@ -128,11 +131,18 @@ async function find_history() {
     <style jsx>{`
       .container {
         margin-top: 65px;
+        padding: 18px 18px 24px;
+        width: 640px;
+        text-align: left;
+        text-decoration: none;
+        background-color: #0275d8
+      }  
+      .tabela {
         font-size:18px; 
       }  
       `}</style>    
-
-    </div>
+  </div>
+    </>
   );
 };
 

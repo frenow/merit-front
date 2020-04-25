@@ -57,16 +57,16 @@ const App = (props) => {
           {
             user
               ? <Menu signOut = {signOut}/>
-              : <div></div>
+              : <></>
           }
           {
             user
-              ? <div></div>            
+              ? <></>            
               : <Button bsStyle="primary" variant="outline-light" onClick={signInWithGoogle}><FcGoogle />Sign in with Google</Button>
           }
           {
             user
-              ? <div></div>            
+              ? <></>            
               : <Home />
           }
         </header>

@@ -25,8 +25,7 @@ const About = () => {
     <style jsx>{`
       .container {
         margin-top: 65px;
-        background: #FFFFFF;
-        color: #000000;
+        background-color: #0275d8
       }  
       p {
         text-align: justify;
@@ -40,10 +39,10 @@ const About = () => {
   .paddingTB60 {padding:60px 0px 60px 0px;}
   .gray-bg {background: #F1F1F1 !important;}
   .about-title {}
-  .about-title h1 {color: #535353; font-size:45px;font-weight:600;}
-  .about-title span {color: #00000; font-size:45px;font-weight:700;}
-  .about-title h3 {color: #535353; font-size:23px;margin-bottom:24px;}
-  .about-title p {color: #7a7a7a;line-height: 1.8;margin: 0 0 15px;}
+  .about-title h1 {font-size:45px;font-weight:600;}
+  .about-title span {color: #f0ad4e;font-size:45px;font-weight:700;}
+  .about-title h3 {font-size:23px;margin-bottom:24px;}
+  .about-title p {line-height: 1.8;margin: 0 0 15px;}
   .about-paddingB {padding-bottom: 12px;}
   .about-img {padding-left: 57px;}
       `}</style>   

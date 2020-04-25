@@ -36,7 +36,7 @@ const Home = (props) => {
     <h3>Metodologia <a href="https://management30.com/practice/merit-money/">Merit Money</a></h3>
     </div>
     <h2><BsGraphUp />Histórico de Movimentações</h2>
-    <Table striped bordered hover variant="dark">
+    <Table striped bordered hover size="sm" variant="dark">
     <thead>
         <tr>
             <th>Data</th>
@@ -63,10 +63,21 @@ const Home = (props) => {
     </tbody>
     </Table>
     <style jsx>{`
+      .container {
+        margin-top: 65px;
+        padding: 18px 18px 24px;
+        width: 800px;
+        text-align: left;
+        text-decoration: none;
+        background-color: #0275d8
+      }
       p {
         text-align: justify;
         text-justify: inter-word;
         font-size:18px; 
+      }
+      h1 {
+        text-align: center;
       }
       `}</style>    
     </div>
