@@ -7,8 +7,7 @@ import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Provider } from 'react-redux';
 import { Store } from './store';
-//import firebase from 'firebase';
-//import { initializeFirebase } from './push-notification';
+import { initializeFirebase } from './push-notification';
 
 ReactDOM.render(
     <Provider store={Store}>
@@ -18,12 +17,7 @@ ReactDOM.render(
     </Provider>,
     document.getElementById("root")
   );
-  //initializeFirebase();
-
-  //const messaging = firebase.messaging();
-  //messaging.onMessage(notification => {
-  //  alert('Notification: ' + JSON.stringify(notification))
-  //});
+  initializeFirebase();
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

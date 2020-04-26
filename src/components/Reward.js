@@ -116,7 +116,7 @@ const Reward = (props) => {
             />
             )}
             <li key={prod.id}>{prod.name} - {prod.description} <p><IoLogoBitcoin />{prod.price}</p></li>
-            <Button onClick={()=>handleClick(prod.id, prod.price)}><GiWantedReward />Solicitar Resgate</Button>
+            <Button bsStyle="primary" variant="outline-light" onClick={()=>handleClick(prod.id, prod.price)}><GiWantedReward />Solicitar Resgate</Button>
         </a>
         )}
         )}

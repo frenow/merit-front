@@ -94,7 +94,7 @@ async function find_history() {
         />
       </label>
       <br />
-      <Button variant="primary" type="submit">Enviar</Button>
+      <Button bsStyle="primary" variant="outline-light" type="submit">Enviar</Button>
       </Form.Group>
     </Form>
       {deposited && (<p>{deposited}</p>)}

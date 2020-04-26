@@ -18,7 +18,7 @@ const redirect = () => {
   return (
     <div>
         <Navbar bg="primary" variant="dark" fixed="top">
-        <Navbar.Brand href="/"><IoLogoBitcoin />Merit</Navbar.Brand>
+        <Navbar.Brand href="#"><IoLogoBitcoin />Merit</Navbar.Brand>
         <Nav className="mr-auto">
             <Nav.Link as={NavLink} to="/">Profile</Nav.Link>
             <Nav.Link as={NavLink} to="/Balance">Saldo</Nav.Link>

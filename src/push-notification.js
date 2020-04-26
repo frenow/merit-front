@@ -1,7 +1,9 @@
 import firebase from 'firebase';
 
 export const initializeFirebase = () => {
-    firebase.initializeApp({messagingSenderId: "609922366963"});
+    if (!firebase.apps.length) {
+        firebase.initializeApp({messagingSenderId: "609922366963"});
+    }
 };
 
 export const askForPermissioToReceiveNotifications = async () => {

@@ -6,7 +6,7 @@ import { compose } from 'redux'
 import * as firebase from 'firebase/app';
 import 'firebase/auth';
 import firebaseConfig from './config/firebaseConfig';
-import { BrowserRouter, Route, Switch, withRouter } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, withRouter, useHistory } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import { Store } from './store';
 import About from "./components/About";
@@ -21,6 +21,7 @@ import './App.css';
 import { ADD_USER } from './actions/actionTypes';
 import { addUser } from './actions';
 import { FcGoogle } from "react-icons/fc";
+import { askForPermissioToReceiveNotifications } from './push-notification';
 
 const firebaseApp = firebase.initializeApp(firebaseConfig);
 
@@ -31,6 +32,8 @@ const App = (props) => {
     signInWithGoogle,
   } = props;
 
+  const history = useHistory();
+  
   useEffect(() => {
     addUser(user);
   }, [user]); 
@@ -39,6 +42,12 @@ const App = (props) => {
     props.addUser(user);
     return { type: ADD_USER, user }
   }  
+
+  const redirect = () => {
+    signInWithGoogle();
+    askForPermissioToReceiveNotifications();
+    history.push("/Profile");
+  }
 
     return (
       <Provider store={Store}>
@@ -58,11 +67,11 @@ const App = (props) => {
             user
               ? <Menu signOut = {signOut}/>
               : <></>
-          }
+          }          
           {
             user
               ? <></>            
-              : <Button bsStyle="primary" variant="outline-light" onClick={signInWithGoogle}><FcGoogle />Sign in with Google</Button>
+              : <Button bsStyle="primary" variant="outline-light" onClick={redirect}><FcGoogle />Sign in with Google</Button>
           }
           {
             user
