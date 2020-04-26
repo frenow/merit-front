@@ -71,7 +71,7 @@ const App = (props) => {
           {
             user
               ? <></>            
-              : <Button bsStyle="primary" variant="outline-light" onClick={redirect}><FcGoogle />Sign in with Google</Button>
+              : <Button bsStyle="primary" onClick={redirect}><FcGoogle />Sign in with Google</Button>
           }
           {
             user

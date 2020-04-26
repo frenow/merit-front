@@ -1,8 +1,8 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: "https://merit-back.herokuapp.com/api",
-//  baseURL: "http://localhost:3001/api",
+//  baseURL: "https://merit-back.herokuapp.com/api",
+  baseURL: "http://localhost:3001/api",
   headers: {
       "Access-Control-Allow-Origin": "*",
       "Access-Control-Allow-Headers": "Authorization", 
