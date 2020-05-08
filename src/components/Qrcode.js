@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Form, Button } from 'react-bootstrap';
-import {CopyToClipboard} from 'react-copy-to-clipboard';
+import { Button } from 'react-bootstrap';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { GiWallet } from "react-icons/gi";
 
 const Qrcode = (props) => {
