@@ -17,6 +17,7 @@ import Withdrawal from "./components/Withdrawal";
 import Reward from "./components/Reward";
 import Profile from "./components/Profile";
 import Home from "./components/Home";
+import Qrcode from "./components/Qrcode";
 import './App.css';
 import { ADD_USER } from './actions/actionTypes';
 import { addUser } from './actions';
@@ -62,6 +63,7 @@ const App = (props) => {
             <Route exact path="/Withdrawal" component={Withdrawal} />
             <Route exact path="/Reward" component={Reward} />
             <Route exact path="/About" component={About} />
+            <Route exact path="/:qrcode" component={Qrcode} />
           </Switch>
           {
             user
