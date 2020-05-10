@@ -13,7 +13,7 @@ const {
 //link localhost
 //const link = window.location.protocol + '//' + window.location.hostname + ':' + window.location.port+"/qrcode?value="+user[0].uid;
 //link web
-  const link = window.location.protocol + '//' + window.location.hostname +"/"+user[0].uid;
+  const link = window.location.protocol + '//' + window.location.hostname +"/Qrcode/"+user[0].uid;
   
   return (
     <div className="container">

@@ -63,7 +63,7 @@ const App = (props) => {
             <Route exact path="/Withdrawal" component={Withdrawal} />
             <Route exact path="/Reward" component={Reward} />
             <Route exact path="/About" component={About} />
-            <Route exact path="/:qrcode" component={Qrcode} />
+            <Route exact path="/Qrcode/:qrcode" component={Qrcode} />
           </Switch>
           {
             user
