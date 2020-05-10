@@ -33,7 +33,7 @@ const Home = (props) => {
     <h3>Como podemos usar estruturas de bônus que podem realmente incentivar a motivação intrínseca?</h3>
     <p>Como podemos incentivar o desempenho? Como podemos recompensar as pessoas pelo trabalho que fizeram? Mais importante, como aumentamos a motivação intrínseca, em vez da motivação extrínseca mais confiável que desaparece rapidamente.</p>
     <img src="https://1qjpt15fhlq3xjfpm2utibj1-wpengine.netdna-ssl.com/wp-content/themes/m30/images/m30-logo.png" alt="Merit" height="90" width="90"></img>
-    <h1><a href="https://management30.com/practice/merit-money/">Merit Money</a></h1>
+    <h3>Metodologia <a href="https://management30.com/practice/merit-money/">Merit Money</a></h3>
     </div>
     <h2><BsGraphUp />Histórico de Movimentações</h2>
     <Table striped bordered hover size="sm" variant="dark">
