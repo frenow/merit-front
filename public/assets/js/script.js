@@ -31,7 +31,7 @@ $(document).ready(function() {
 									'</div><!--col-hgt end-->'+
 									'<div class="col-hgt">'+
 										'<div class="chat-txt">'+
-											'Chat with us now!'+
+											'Converse comigo!'+
 										'</div>'+
 									'</div><!--col-hgt end-->'+
 								'</div><!--row end-->'+
