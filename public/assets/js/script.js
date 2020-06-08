@@ -20,7 +20,7 @@ $(document).ready(function() {
 										'<div class="bounce2"></div>'+
 										'<div class="bounce3"></div>'+
 									'</div>'+
-									'<input type="text" id="chat-input" autocomplete="off" placeholder="Try typing here"'+ 'class="form-control bot-txt"/>'+
+									'<input type="text" id="chat-input" autocomplete="off" placeholder="Digite aqui"'+ 'class="form-control bot-txt"/>'+
 								'</div>'+
 							'</div><!--chatCont end-->'+
 
