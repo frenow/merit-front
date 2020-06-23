@@ -31,7 +31,7 @@ const Home = (props) => {
     <div className="container">
     <h1>Sistema de Recompensa <IoLogoBitcoin />Merit</h1>
     <h3>Modelo de sistema de bonificação e recompensa colaborativo e contínuo que incentiva o 
-apoio e o reconhecimento do trabalho de seus companheiros de acordo com seus próprios critérios.</h3>
+    apoio e o reconhecimento do trabalho de seus companheiros de acordo com seus próprios critérios.</h3>
     <h3>Como podemos usar estruturas de bônus que podem realmente incentivar a motivação intrínseca?</h3>
     <p>Como podemos incentivar o desempenho? Como podemos recompensar as pessoas pelo trabalho que fizeram? Mais importante, como aumentamos a motivação intrínseca, em vez da motivação extrínseca mais confiável que desaparece rapidamente.</p>
     <img src="https://1qjpt15fhlq3xjfpm2utibj1-wpengine.netdna-ssl.com/wp-content/themes/m30/images/m30-logo.png" alt="Merit" height="90" width="90"></img>
